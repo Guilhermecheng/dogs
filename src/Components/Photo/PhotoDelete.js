@@ -5,7 +5,7 @@ import useFetch from '../../Hooks/useFetch';
 import styles from './PhotoDelete.module.css';
 
 const PhotoDelete = ({ id }) => {
-    const { loading, request, error } = useFetch();
+    const { loading, request } = useFetch();
     
     async function handleClick() {
         const confirm = window.confirm('Tem certeza de que deseja deletar a foto?');

@@ -21,7 +21,7 @@ export const UserStorage = ({ children }) => {
         setLoading(false);
         setLogin(false);
         navigate('/login');
-        console.log('saiu')
+        // console.log('saiu')
         window.localStorage.removeItem('token');
     }, [navigate]);
 
@@ -32,7 +32,7 @@ export const UserStorage = ({ children }) => {
         const json = await response.json();
         setData(json);
         setLogin(true);
-        console.log(json)
+        // console.log(json)
     }
 
 
@@ -53,7 +53,7 @@ export const UserStorage = ({ children }) => {
 
         } catch(err) {
             setError(err.message);
-            console.log(err.message)
+            // console.log(err.message)
             setLogin(false);
         } finally {
             setLoading(false);
@@ -73,7 +73,7 @@ export const UserStorage = ({ children }) => {
                     if(!response.ok) throw new Error('Token inválido');
                     await getUser(token);
                     const json = await response.json();
-                    console.log(json)
+                    // console.log(json)
                 } catch(err) {
                     userLogout();
                 } finally {
