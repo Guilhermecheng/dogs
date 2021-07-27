@@ -10,6 +10,7 @@ import { UserContext } from '../../UserContext';
 
 import styles from './LoginForm.module.css';
 import stylesBtn from '../Form/Button.module.css';
+import Head from '../Helper/Head';
 
 
 const LoginForm = () => {
@@ -29,7 +30,8 @@ const LoginForm = () => {
 
 
     return (
-        <div className="animeLeft">
+        <section className="animeLeft">
+            <Head title="Login" />
             <h1 className="title">Login</h1>
             <form className={styles.form} onSubmit={handleSubmit}>
                 <Input label="Usuário" type="text" name="username" {...username} />
@@ -53,7 +55,7 @@ const LoginForm = () => {
                 <p>Ainda não possui conta? Cadastre-se no site</p>
                 <Link className={stylesBtn.button} to="/login/criar">Cadastro</Link>
             </div>
-        </div>
+        </section>
     )
 }
 
